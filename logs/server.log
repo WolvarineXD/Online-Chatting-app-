@@ -1,0 +1,275 @@
+[13:20:30]  INFO   main      ╔══════════════════════════════════════════════════════════╗
+[13:20:30]  INFO   main      ║         SecureChat  v2.0  —  E2EE Relay + DB             ║
+[13:20:30]  INFO   main      ╠══════════════════════════════════════════════════════════╣
+[13:20:30]  INFO   main      ║  Local      →  http://localhost:8080                     ║
+[13:20:30]  INFO   main      ║  LAN        →  http://192.168.29.221:8080
+[13:20:30]  INFO   main      ║  Internet   →  ngrok http 8080   (then share the URL)   ║
+[13:20:30]  INFO   main      ╠══════════════════════════════════════════════════════════╣
+[13:20:30]  INFO   main      ║  Database   →  C:\Users\Adith Kiran Kumar\Downloads\chatting\chat.db
+[13:20:30]  INFO   main      ║  Logs       →  C:\Users\Adith Kiran Kumar\Downloads\chatting\logs\server.log
+[13:20:30]  INFO   main      ║  Health     →  http://localhost:8080/health
+[13:20:30]  INFO   main      ╚══════════════════════════════════════════════════════════╝
+[13:24:18]  INFO   main      ╔══════════════════════════════════════════════════════════╗
+[13:24:18]  INFO   main      ║         SecureChat  v2.0  —  E2EE Relay + DB             ║
+[13:24:18]  INFO   main      ╠══════════════════════════════════════════════════════════╣
+[13:24:18]  INFO   main      ║  Local      →  http://localhost:8080                     ║
+[13:24:18]  INFO   main      ║  LAN        →  http://192.168.29.221:8080
+[13:24:18]  INFO   main      ║  Internet   →  ngrok http 8080   (then share the URL)   ║
+[13:24:18]  INFO   main      ╠══════════════════════════════════════════════════════════╣
+[13:24:18]  INFO   main      ║  Database   →  C:\Users\Adith Kiran Kumar\Downloads\chatting\chat.db
+[13:24:18]  INFO   main      ║  Logs       →  C:\Users\Adith Kiran Kumar\Downloads\chatting\logs\server.log
+[13:24:18]  INFO   main      ║  Health     →  http://localhost:8080/health
+[13:24:18]  INFO   main      ╚══════════════════════════════════════════════════════════╝
+[13:31:17]  INFO   main      ╔══════════════════════════════════════════════════════════╗
+[13:31:17]  INFO   main      ║         SecureChat  v2.0  —  E2EE Relay + DB             ║
+[13:31:17]  INFO   main      ╠══════════════════════════════════════════════════════════╣
+[13:31:17]  INFO   main      ║  Local      →  http://localhost:8080                     ║
+[13:31:17]  INFO   main      ║  LAN        →  http://192.168.29.221:8080
+[13:31:17]  INFO   main      ║  Internet   →  ngrok http 8080   (then share the URL)   ║
+[13:31:17]  INFO   main      ╠══════════════════════════════════════════════════════════╣
+[13:31:17]  INFO   main      ║  Database   →  C:\Users\Adith Kiran Kumar\Downloads\chatting\chat.db
+[13:31:17]  INFO   main      ║  Logs       →  C:\Users\Adith Kiran Kumar\Downloads\chatting\logs\server.log
+[13:31:17]  INFO   main      ║  Health     →  http://localhost:8080/health
+[13:31:17]  INFO   main      ╚══════════════════════════════════════════════════════════╝
+[13:37:23]  INFO   main      ╔══════════════════════════════════════════════════════════╗
+[13:37:23]  INFO   main      ║         SecureChat  v2.0  —  E2EE Relay + DB             ║
+[13:37:23]  INFO   main      ╠══════════════════════════════════════════════════════════╣
+[13:37:23]  INFO   main      ║  Local      →  http://localhost:8080                     ║
+[13:37:23]  INFO   main      ║  LAN        →  http://192.168.29.221:8080
+[13:37:23]  INFO   main      ║  Internet   →  ngrok http 8080   (then share the URL)   ║
+[13:37:23]  INFO   main      ╠══════════════════════════════════════════════════════════╣
+[13:37:23]  INFO   main      ║  Database   →  C:\Users\Adith Kiran Kumar\Downloads\chatting\chat.db
+[13:37:23]  INFO   main      ║  Logs       →  C:\Users\Adith Kiran Kumar\Downloads\chatting\logs\server.log
+[13:37:23]  INFO   main      ║  Health     →  http://localhost:8080/health
+[13:37:23]  INFO   main      ╚══════════════════════════════════════════════════════════╝
+[13:37:53]  INFO   relay     NEW   'adith'               ip=12ca17b49af22894
+[13:38:56]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:39:28]  INFO   relay     NEW   'kiran'               ip=12ca17b49af22894
+[13:40:48]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:40:48]  INFO   relay     LEAVE 'adith'               |  online: 1
+[13:40:49]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:40:49]  INFO   relay     LEAVE 'adith'               |  online: 1
+[13:40:50]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:40:50]  INFO   relay     LEAVE 'adith'               |  online: 1
+[13:40:52]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:40:52]  INFO   relay     LEAVE 'adith'               |  online: 1
+[13:40:53]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:40:53]  INFO   relay     LEAVE 'adith'               |  online: 1
+[13:40:54]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:40:55]  INFO   relay     LEAVE 'adith'               |  online: 1
+[13:40:56]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:40:56]  INFO   relay     LEAVE 'adith'               |  online: 1
+[13:40:57]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:40:57]  INFO   relay     LEAVE 'adith'               |  online: 1
+[13:41:45]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:41:45]  INFO   relay     LEAVE 'adith'               |  online: 1
+[13:41:47]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:41:47]  INFO   relay     LEAVE 'adith'               |  online: 1
+[13:41:48]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:41:48]  INFO   relay     LEAVE 'adith'               |  online: 1
+[13:41:49]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:41:49]  INFO   relay     LEAVE 'adith'               |  online: 1
+[13:41:51]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:41:51]  INFO   relay     LEAVE 'adith'               |  online: 1
+[13:41:52]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:41:52]  INFO   relay     LEAVE 'adith'               |  online: 1
+[13:41:53]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:41:53]  INFO   relay     LEAVE 'adith'               |  online: 1
+[13:41:55]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:41:55]  INFO   relay     LEAVE 'adith'               |  online: 1
+[13:41:56]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:41:56]  INFO   relay     LEAVE 'adith'               |  online: 1
+[13:41:57]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:41:57]  INFO   relay     LEAVE 'adith'               |  online: 1
+[13:41:59]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:41:59]  INFO   relay     LEAVE 'adith'               |  online: 1
+[13:42:00]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:00]  INFO   relay     LEAVE 'adith'               |  online: 1
+[13:42:01]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:01]  INFO   relay     LEAVE 'adith'               |  online: 1
+[13:42:02]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:03]  INFO   relay     LEAVE 'adith'               |  online: 1
+[13:42:04]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:04]  INFO   relay     LEAVE 'adith'               |  online: 1
+[13:42:05]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:05]  INFO   relay     LEAVE 'adith'               |  online: 1
+[13:42:06]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:07]  INFO   relay     LEAVE 'adith'               |  online: 1
+[13:42:08]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:08]  INFO   relay     LEAVE 'adith'               |  online: 1
+[13:42:08]  INFO   relay     LEAVE 'kiran'               |  online: 0
+[13:42:09]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:09]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:42:10]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:10]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:42:12]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:12]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:42:13]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:13]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:42:14]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:14]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:42:16]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:16]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:42:17]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:17]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:42:18]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:19]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:42:20]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:20]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:42:21]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:21]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:42:22]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:23]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:42:24]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:24]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:42:25]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:25]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:42:27]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:27]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:42:28]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:28]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:42:30]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:30]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:42:31]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:31]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:42:32]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:32]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:42:34]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:34]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:42:35]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:35]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:42:36]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:36]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:42:38]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:38]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:42:39]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:39]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:42:40]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:40]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:42:42]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:42]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:42:43]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:43]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:42:44]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:44]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:42:46]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:46]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:42:47]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:42:47]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:43:03]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:43:03]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:43:05]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:43:05]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:43:06]  WARNING  relay     AUTH FAIL  'adith'               ip=12ca17b49af22894
+[13:43:06]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:46:18]  INFO   main      ╔══════════════════════════════════════════════════════════╗
+[13:46:18]  INFO   main      ║         SecureChat  v2.0  —  E2EE Relay + DB             ║
+[13:46:18]  INFO   main      ╠══════════════════════════════════════════════════════════╣
+[13:46:18]  INFO   main      ║  Local      →  http://localhost:8080                     ║
+[13:46:18]  INFO   main      ║  LAN        →  http://192.168.29.221:8080
+[13:46:18]  INFO   main      ║  Internet   →  ngrok http 8080   (then share the URL)   ║
+[13:46:18]  INFO   main      ╠══════════════════════════════════════════════════════════╣
+[13:46:18]  INFO   main      ║  Database   →  C:\Users\Adith Kiran Kumar\Downloads\chatting\chat.db
+[13:46:18]  INFO   main      ║  Logs       →  C:\Users\Adith Kiran Kumar\Downloads\chatting\logs\server.log
+[13:46:18]  INFO   main      ║  Health     →  http://localhost:8080/health
+[13:46:18]  INFO   main      ╚══════════════════════════════════════════════════════════╝
+[13:47:02]  INFO   relay     NEW   'adith'               ip=12ca17b49af22894
+[13:47:07]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:47:15]  INFO   relay     JOIN  'adith'               ip=12ca17b49af22894  |  online: 1
+[13:47:18]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:47:22]  INFO   relay     JOIN  'adith'               ip=12ca17b49af22894  |  online: 1
+[13:49:11]  INFO   relay     NEW   'kiran'               ip=12ca17b49af22894
+[13:49:17]  INFO   relay     MSG   'kiran'         → 'adith'          id=1
+[13:49:28]  INFO   relay     MSG   'adith'         → 'kiran'          id=2
+[13:49:47]  INFO   relay     LEAVE 'kiran'               |  online: 1
+[13:49:55]  INFO   relay     JOIN  'kiran'               ip=12ca17b49af22894  |  online: 2
+[13:50:03]  INFO   relay     MSG   'kiran'         → 'adith'          id=3
+[13:50:12]  INFO   relay     LEAVE 'kiran'               |  online: 1
+[13:50:18]  INFO   relay     LEAVE 'adith'               |  online: 0
+[13:50:23]  INFO   relay     JOIN  'adith'               ip=12ca17b49af22894  |  online: 1
+[13:54:38]  INFO   relay     LEAVE 'adith'               |  online: 0
+[14:03:46]  INFO   main      ╔══════════════════════════════════════════════════════════╗
+[14:03:46]  INFO   main      ║         SecureChat  v2.0  —  E2EE Relay + DB             ║
+[14:03:46]  INFO   main      ╠══════════════════════════════════════════════════════════╣
+[14:03:46]  INFO   main      ║  Local      →  http://localhost:8080                     ║
+[14:03:46]  INFO   main      ║  LAN        →  http://192.168.29.221:8080
+[14:03:46]  INFO   main      ║  Internet   →  ngrok http 8080   (then share the URL)   ║
+[14:03:46]  INFO   main      ╠══════════════════════════════════════════════════════════╣
+[14:03:46]  INFO   main      ║  Database   →  C:\Users\Adith Kiran Kumar\Downloads\chatting\chat.db
+[14:03:46]  INFO   main      ║  Logs       →  C:\Users\Adith Kiran Kumar\Downloads\chatting\logs\server.log
+[14:03:46]  INFO   main      ║  Health     →  http://localhost:8080/health
+[14:03:46]  INFO   main      ╚══════════════════════════════════════════════════════════╝
+[14:04:40]  INFO   relay     JOIN  'adith'               ip=12ca17b49af22894  |  online: 1
+[14:04:58]  INFO   relay     LEAVE 'adith'               |  online: 0
+[14:05:03]  INFO   relay     JOIN  'adith'               ip=12ca17b49af22894  |  online: 1
+[14:05:23]  INFO   relay     LEAVE 'adith'               |  online: 0
+[14:14:24]  INFO   relay     JOIN  'adith'               ip=12ca17b49af22894  |  online: 1
+[14:14:38]  INFO   relay     LEAVE 'adith'               |  online: 0
+[14:14:42]  INFO   relay     JOIN  'adith'               ip=12ca17b49af22894  |  online: 1
+[14:14:47]  INFO   relay     LEAVE 'adith'               |  online: 0
+[14:18:49]  INFO   main      ╔══════════════════════════════════════════════════════════╗
+[14:18:49]  INFO   main      ║         SecureChat  v2.0  —  E2EE Relay + DB             ║
+[14:18:49]  INFO   main      ╠══════════════════════════════════════════════════════════╣
+[14:18:49]  INFO   main      ║  Local      →  http://localhost:8080                     ║
+[14:18:49]  INFO   main      ║  LAN        →  http://192.168.29.221:8080
+[14:18:49]  INFO   main      ║  Internet   →  ngrok http 8080   (then share the URL)   ║
+[14:18:49]  INFO   main      ╠══════════════════════════════════════════════════════════╣
+[14:18:49]  INFO   main      ║  Database   →  C:\Users\Adith Kiran Kumar\Downloads\chatting\chat.db
+[14:18:49]  INFO   main      ║  Logs       →  C:\Users\Adith Kiran Kumar\Downloads\chatting\logs\server.log
+[14:18:49]  INFO   main      ║  Health     →  http://localhost:8080/health
+[14:18:49]  INFO   main      ╚══════════════════════════════════════════════════════════╝
+[14:19:19]  INFO   relay     JOIN  'adith'               ip=12ca17b49af22894  |  online: 1
+[14:20:08]  INFO   relay     LEAVE 'adith'               |  online: 0
+[17:50:56]  INFO   main      ╔══════════════════════════════════════════════════════════╗
+[17:50:56]  INFO   main      ║         SecureChat  v2.0  —  E2EE Relay + DB             ║
+[17:50:56]  INFO   main      ╠══════════════════════════════════════════════════════════╣
+[17:50:56]  INFO   main      ║  Local      →  http://localhost:8080                     ║
+[17:50:56]  INFO   main      ║  LAN        →  http://192.168.29.221:8080
+[17:50:56]  INFO   main      ║  Internet   →  ngrok http 8080   (then share the URL)   ║
+[17:50:56]  INFO   main      ╠══════════════════════════════════════════════════════════╣
+[17:50:56]  INFO   main      ║  Database   →  C:\Users\Adith Kiran Kumar\Downloads\chatting\chat.db
+[17:50:56]  INFO   main      ║  Logs       →  C:\Users\Adith Kiran Kumar\Downloads\chatting\logs\server.log
+[17:50:56]  INFO   main      ║  Health     →  http://localhost:8080/health
+[17:50:56]  INFO   main      ╚══════════════════════════════════════════════════════════╝
+[17:53:10]  INFO   relay     JOIN  'adith'               ip=12ca17b49af22894  |  online: 1
+[18:07:16]  INFO   relay     LEAVE 'adith'               |  online: 0
+[18:07:26]  INFO   main      ╔══════════════════════════════════════════════════════════╗
+[18:07:26]  INFO   main      ║         SecureChat  v2.0  —  E2EE Relay + DB             ║
+[18:07:26]  INFO   main      ╠══════════════════════════════════════════════════════════╣
+[18:07:26]  INFO   main      ║  Local      →  http://localhost:8080                     ║
+[18:07:26]  INFO   main      ║  LAN        →  http://192.168.29.221:8080
+[18:07:26]  INFO   main      ║  Internet   →  ngrok http 8080   (then share the URL)   ║
+[18:07:26]  INFO   main      ╠══════════════════════════════════════════════════════════╣
+[18:07:26]  INFO   main      ║  Database   →  C:\Users\Adith Kiran Kumar\Downloads\chatting\chat.db
+[18:07:26]  INFO   main      ║  Logs       →  C:\Users\Adith Kiran Kumar\Downloads\chatting\logs\server.log
+[18:07:26]  INFO   main      ║  Health     →  http://localhost:8080/health
+[18:07:26]  INFO   main      ╚══════════════════════════════════════════════════════════╝
+[18:07:54]  INFO   relay     JOIN  'adith'               ip=12ca17b49af22894  |  online: 1
+[18:08:05]  INFO   relay     LEAVE 'adith'               |  online: 0
+[18:31:02]  INFO   main      ╔══════════════════════════════════════════════════════════╗
+[18:31:02]  INFO   main      ║         SecureChat  v2.0  —  E2EE Relay + DB             ║
+[18:31:02]  INFO   main      ╠══════════════════════════════════════════════════════════╣
+[18:31:02]  INFO   main      ║  Local      →  http://localhost:8080                     ║
+[18:31:02]  INFO   main      ║  LAN        →  http://192.168.29.221:8080
+[18:31:02]  INFO   main      ║  Internet   →  ngrok http 8080   (then share the URL)   ║
+[18:31:02]  INFO   main      ╠══════════════════════════════════════════════════════════╣
+[18:31:02]  INFO   main      ║  Database   →  C:\Users\Adith Kiran Kumar\Downloads\chatting\chat.db
+[18:31:02]  INFO   main      ║  Logs       →  C:\Users\Adith Kiran Kumar\Downloads\chatting\logs\server.log
+[18:31:02]  INFO   main      ║  Health     →  http://localhost:8080/health
+[18:31:02]  INFO   main      ╚══════════════════════════════════════════════════════════╝
+[18:31:35]  INFO   relay     JOIN  'adith'               ip=12ca17b49af22894  |  online: 1
+[18:32:06]  INFO   relay     LEAVE 'adith'               |  online: 0
+[18:32:26]  INFO   relay     JOIN  'adith'               ip=12ca17b49af22894  |  online: 1
+[18:32:55]  INFO   relay     LEAVE 'adith'               |  online: 0
+[18:33:00]  INFO   relay     JOIN  'adith'               ip=12ca17b49af22894  |  online: 1
+[18:43:20]  INFO   main      ╔══════════════════════════════════════════════════════════╗
+[18:43:20]  INFO   main      ║         SecureChat  v2.0  —  E2EE Relay + DB             ║
+[18:43:20]  INFO   main      ╠══════════════════════════════════════════════════════════╣
+[18:43:20]  INFO   main      ║  Local      →  http://localhost:8080                     ║
+[18:43:20]  INFO   main      ║  LAN        →  http://192.168.29.221:8080
+[18:43:20]  INFO   main      ║  Internet   →  ngrok http 8080   (then share the URL)   ║
+[18:43:20]  INFO   main      ╠══════════════════════════════════════════════════════════╣
+[18:43:20]  INFO   main      ║  Database   →  C:\Users\Adith Kiran Kumar\Downloads\chatting\chat.db
+[18:43:20]  INFO   main      ║  Logs       →  C:\Users\Adith Kiran Kumar\Downloads\chatting\logs\server.log
+[18:43:20]  INFO   main      ║  Health     →  http://localhost:8080/health
+[18:43:20]  INFO   main      ╚══════════════════════════════════════════════════════════╝

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SecureChat — Secure Messaging</title>
+  <meta name="description" content="End-to-end encrypted private messaging. Your messages are encrypted before leaving your device." />
+  <meta name="theme-color" content="#1b2838" />
+  <!-- Inline SVG favicon — no external request, works with CSP img-src data: -->
+  <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='3' y='11' width='18' height='11' rx='2' fill='%234da6f5'/%3E%3Cpath d='M7 11V7a5 5 0 0 1 10 0v4' fill='none' stroke='%234da6f5' stroke-width='2'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/styles.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════
+     LOGIN SCREEN
+     ══════════════════════════════════════════════════════════ -->
+<div id="login-screen" class="login-screen">
+  <div class="login-card" role="main">
+
+    <div class="brand">
+      <div class="brand-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+        </svg>
+      </div>
+      <span class="brand-name">SecureChat</span>
+      <span class="brand-tagline">End-to-End Encrypted Messaging</span>
+    </div>
+
+    <form id="login-form" autocomplete="off">
+
+      <div class="section-label">Account</div>
+
+      <div class="field">
+        <label class="required" for="inp-name">Username</label>
+        <input id="inp-name" type="text" placeholder="Choose a username"
+               maxlength="30" autocomplete="off" spellcheck="false" />
+        <span class="field-hint" id="name-hint"></span>
+      </div>
+
+      <div class="field">
+        <label class="required" for="inp-account-pass">
+          Account Password
+          <div class="strength-wrap"><div id="strength-bar" class="strength-bar"></div></div>
+        </label>
+        <div class="strength-text" id="strength-text"></div>
+        <div class="pass-wrap">
+          <input id="inp-account-pass" type="password"
+                 placeholder="Your private login password" />
+          <button type="button" id="eye-account-btn" class="eye-btn" aria-label="Toggle visibility">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+            </svg>
+          </button>
+        </div>
+        <span class="field-hint">First login creates your account automatically</span>
+      </div>
+
+      <div class="section-label" style="margin-top:.8rem">Encryption</div>
+
+      <div class="field">
+        <label for="inp-chat-pass">Chat Password</label>
+        <div class="pass-wrap">
+          <input id="inp-chat-pass" type="password"
+                 placeholder="Shared secret — tell your friends" />
+          <button type="button" id="eye-chat-btn" class="eye-btn" aria-label="Toggle visibility">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+            </svg>
+          </button>
+        </div>
+        <span class="field-hint">Everyone you chat with needs the same Chat Password</span>
+      </div>
+
+      <div class="tos-row">
+        <input type="checkbox" id="chk-tos" />
+        <label for="chk-tos">
+          I accept the
+          <button type="button" id="tos-link-btn" class="link-btn">Terms of Service</button>
+          and will not use SecureChat for illegal activities.
+        </label>
+      </div>
+
+      <div id="login-error" class="error-msg" role="alert" aria-live="polite"></div>
+
+      <button id="btn-login" type="submit">
+        <span id="btn-label">Sign In / Register</span>
+        <svg id="btn-spinner" class="spin hidden" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
+        </svg>
+      </button>
+    </form>
+
+    <div class="login-footer">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+      </svg>
+      AES-256 encrypted &nbsp;·&nbsp; Server never reads messages &nbsp;·&nbsp; Metadata logged for compliance
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     TERMS OF SERVICE MODAL
+     ══════════════════════════════════════════════════════════ -->
+<div id="tos-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="tos-h">
+  <div id="tos-backdrop" class="modal-backdrop"></div>
+  <div class="modal-card">
+    <div class="modal-header">
+      <h2 id="tos-h">Terms of Service</h2>
+      <button id="tos-close-btn" class="icon-btn" aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <h3>Acceptable Use Policy</h3>
+      <p>By connecting to SecureChat, you agree to the following:</p>
+      <ul>
+        <li>You will not use this service for any illegal purpose</li>
+        <li>You will not harass, threaten, or distribute harmful content</li>
+        <li>You will not share illegal material of any kind</li>
+        <li>You are 13 years of age or older</li>
+        <li>You understand that violating these terms may result in account suspension</li>
+      </ul>
+      <h3>Privacy &amp; Data Retention</h3>
+      <p>SecureChat stores <strong>only encrypted ciphertext</strong> — the server operator cannot read your messages. However, the following metadata is permanently logged:</p>
+      <ul>
+        <li>Account creation and last login timestamps</li>
+        <li>Connection and disconnection events</li>
+        <li>Anonymised IP address hashes (one-way only, not reversible)</li>
+        <li>Message routing metadata (sender → recipient identifiers, timestamps)</li>
+      </ul>
+      <h3>Law Enforcement</h3>
+      <p>In response to a valid legal order, the operator will provide available metadata logs to law enforcement. Message content <strong>cannot be provided</strong> as it is encrypted client-side and the server does not possess decryption keys.</p>
+      <h3>Disclaimer</h3>
+      <p>This service is provided as-is. The operator accepts no liability for misuse.</p>
+    </div>
+    <div class="modal-footer">
+      <button id="tos-accept-btn">I Accept</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     MAIN APP
+     ══════════════════════════════════════════════════════════ -->
+<div id="app" class="app hidden">
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-brand">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="11" width="18" height="11" rx="2"/>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+        </svg>
+        SecureChat
+      </div>
+      <div class="conn-pill" id="conn-pill">
+        <span class="conn-pulse"></span>
+        <span id="online-count">0</span>&nbsp;online
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <svg class="search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      <input id="search-input" type="search" placeholder="Search conversations…" />
+    </div>
+
+    <div class="contacts-area">
+      <div class="contacts-list" id="contacts-list"></div>
+      <div class="contacts-empty hidden" id="contacts-empty">
+        <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+        <strong>No conversations yet</strong>
+        <span>Share the server link to invite others</span>
+      </div>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="my-profile">
+        <div id="my-avatar"></div>
+        <div class="my-info">
+          <span class="my-name" id="my-name"></span>
+          <span class="my-status">
+            <span class="status-dot online"></span> Online · E2EE
+          </span>
+        </div>
+        <button class="icon-btn" id="logout-btn" title="Sign out">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+            <polyline points="16 17 21 12 16 7"/>
+            <line x1="21" y1="12" x2="9" y2="12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Chat Area -->
+  <main class="chat-area">
+
+    <div id="empty-state" class="empty-state">
+      <div class="empty-icon">
+        <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+      </div>
+      <h2>Select a conversation</h2>
+      <p>Choose a contact from the sidebar to start an encrypted conversation. Messages are encrypted before leaving your device.</p>
+      <div class="trust-badges">
+        <span class="trust-badge">🔒 AES-256</span>
+        <span class="trust-badge">📋 Audit Logged</span>
+        <span class="trust-badge">⚡ Real-time</span>
+        <span class="trust-badge">💾 History</span>
+      </div>
+    </div>
+
+    <div id="chat-view" class="chat-view hidden">
+
+      <div class="chat-header">
+        <button class="icon-btn back-btn" id="back-btn" aria-label="Back">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+        </button>
+        <div id="hdr-avatar"></div>
+        <div class="hdr-info">
+          <span class="hdr-name" id="hdr-name"></span>
+          <span class="hdr-status" id="hdr-status"></span>
+        </div>
+      </div>
+
+      <!-- Decrypt warning — shown when messages can't be read -->
+      <div class="decrypt-warn hidden" id="decrypt-warn">
+        <span class="decrypt-warn-text">🔒 Some messages are encrypted with a different Chat Password and can't be read.</span>
+        <button id="change-key-btn">Change Key</button>
+      </div>
+
+      <div class="messages-pane" id="messages-pane"></div>
+
+      <div class="typing-bar hidden" id="typing-bar">
+        <div class="typing-chip">
+          <span id="typing-name"></span>
+          <div class="typing-dots"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+
+      <div class="input-area">
+        <!-- Inline chat-key changer (hidden by default) -->
+        <div class="key-prompt hidden" id="key-prompt">
+          <span class="key-label">🔑 New Chat Password:</span>
+          <input id="key-prompt-input" type="text" placeholder="Enter Chat Password…" autocomplete="off" />
+          <button id="key-prompt-submit">Apply</button>
+          <button class="icon-btn" id="key-prompt-cancel" style="padding:2px 6px;font-size:.75rem">✕</button>
+        </div>
+        <div class="emoji-picker hidden" id="emoji-picker"></div>
+        <div class="input-row">
+          <button class="icon-btn emoji-btn" id="emoji-toggle-btn" title="Insert emoji">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M8 13s1.5 2 4 2 4-2 4-2"/>
+              <line x1="9" y1="9" x2="9.01" y2="9"/>
+              <line x1="15" y1="9" x2="15.01" y2="9"/>
+            </svg>
+          </button>
+          <textarea id="msg-input" placeholder="Type a message…" rows="1"></textarea>
+          <button class="send-btn" id="send-btn" title="Send (Enter)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="22" y1="2" x2="11" y2="13"/>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<div id="toast-container" aria-live="assertive"></div>
+
+<button id="scroll-fab" class="scroll-fab hidden" title="Latest messages">
+  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="6 9 12 15 18 9"/>
+  </svg>
+</button>
+
+<!-- Scripts — load order: crypto → ui → network → app -->
+<script src="/static/js/crypto.js"></script>
+<script src="/static/js/ui.js"></script>
+<script src="/static/js/network.js"></script>
+<script src="/static/js/app.js"></script>
+</body>
+</html>
